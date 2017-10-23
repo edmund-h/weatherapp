@@ -48,13 +48,14 @@ class ForecastViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "forecastCell") as! UITableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "forecastCell") as! ForecastTableViewCell
         let myForecast = forecasts[indexPath.row]
-        if let myImg = UIImage(contentsOfFile: myForecast.icon){
-            cell.imageView!.image = myImg
+        if let myImg = UIImage(named: myForecast.icon) {
+            cell.icon.image = myImg
         }
-        cell.textLabel!.text = dateFormatter.string(from: myForecast.date)
-        cell.detailTextLabel!.text = "High of \(myForecast.maxTempF), low of \(myForecast.minTempF)"
+        cell.dateLabel.text = dateFormatter.string(from: myForecast.date)
+        cell.highLabel.text = "High: \(myForecast.maxTempF)"
+        cell.lowLabel.text = "Low: \(myForecast.minTempF)"
         return cell
     }
 }

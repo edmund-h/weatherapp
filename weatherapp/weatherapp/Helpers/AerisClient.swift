@@ -24,7 +24,7 @@ final class AerisClient {
                 let sessionData = try JSONSerialization.jsonObject(with: data, options: [])
                 if let responseDict = sessionData as? [String:Any],
                     let response = responseDict["response"] as? [[String:Any]],
-                    let searchDict = response.first as? [String:Any]{
+                    let searchDict = response.first{
                     let forecasts = Forecast.makeFrom(json: searchDict)
                     completion(forecasts)
                 } else {

@@ -5,41 +5,82 @@
     </device>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Forecast View Controller-->
+        <!--New York City Weather-->
         <scene sceneID="ChB-pe-oLQ">
             <objects>
-                <tableViewController id="OLk-46-EC2" customClass="ForecastViewController" customModule="weatherapp" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController title="New York City Weather" id="OLk-46-EC2" customClass="ForecastViewController" customModule="weatherapp" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="guk-PV-lni">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="forecastCell" textLabel="q1j-JI-SOv" detailTextLabel="vaX-u9-Ci2" style="IBUITableViewCellStyleSubtitle" id="WCz-E8-lvD">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="forecastCell" rowHeight="65" id="WCz-E8-lvD" customClass="ForecastTableViewCell" customModule="weatherapp" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="65"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="WCz-E8-lvD" id="jr1-qS-WYd">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="64.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="q1j-JI-SOv">
-                                            <rect key="frame" x="16" y="5" width="33.5" height="20.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Detail" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="vaX-u9-Ci2">
-                                            <rect key="frame" x="16" y="25.5" width="33" height="14.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Grq-P8-bFJ">
+                                            <rect key="frame" x="310.5" y="5" width="54.5" height="54.5"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="55" id="GxS-Y8-MGg"/>
+                                                <constraint firstAttribute="width" secondItem="Grq-P8-bFJ" secondAttribute="height" multiplier="1:1" id="Q4x-aa-RAs"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7MT-IF-INn">
+                                            <rect key="frame" x="143" y="8" width="31" height="21"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="21" id="GSU-Nh-i6P"/>
+                                            </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W3u-14-XFA">
+                                            <rect key="frame" x="143" y="37" width="31" height="21"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="21" id="5HI-5Y-Pg7"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="October 23" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gDG-Ze-kER">
+                                            <rect key="frame" x="10" y="5" width="125" height="53"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="53" id="WN9-Gd-ebc"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
                                     </subviews>
+                                    <constraints>
+                                        <constraint firstItem="7MT-IF-INn" firstAttribute="leading" secondItem="gDG-Ze-kER" secondAttribute="trailing" constant="8" id="29Q-je-JTv"/>
+                                        <constraint firstItem="Grq-P8-bFJ" firstAttribute="width" secondItem="Grq-P8-bFJ" secondAttribute="height" multiplier="1:1" id="5RX-1h-wvs"/>
+                                        <constraint firstItem="gDG-Ze-kER" firstAttribute="leading" secondItem="jr1-qS-WYd" secondAttribute="leading" constant="10" id="EYR-4M-vhI"/>
+                                        <constraint firstItem="gDG-Ze-kER" firstAttribute="top" secondItem="jr1-qS-WYd" secondAttribute="top" constant="5" id="FfZ-Xf-XaQ"/>
+                                        <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="W3u-14-XFA" secondAttribute="trailing" constant="20" symbolic="YES" id="Gd5-UF-hSv"/>
+                                        <constraint firstAttribute="trailing" secondItem="Grq-P8-bFJ" secondAttribute="trailing" constant="10" id="Hkc-QN-ZKV"/>
+                                        <constraint firstItem="W3u-14-XFA" firstAttribute="leading" secondItem="gDG-Ze-kER" secondAttribute="trailing" constant="8" id="IiK-CO-6mN"/>
+                                        <constraint firstItem="7MT-IF-INn" firstAttribute="top" secondItem="jr1-qS-WYd" secondAttribute="top" constant="8" id="cwA-T1-WtM"/>
+                                        <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="7MT-IF-INn" secondAttribute="trailing" constant="20" symbolic="YES" id="fbg-Bx-Je5"/>
+                                        <constraint firstAttribute="trailing" relation="lessThanOrEqual" secondItem="gDG-Ze-kER" secondAttribute="trailing" constant="240" id="gvh-lh-QqC"/>
+                                        <constraint firstItem="Grq-P8-bFJ" firstAttribute="top" secondItem="jr1-qS-WYd" secondAttribute="top" constant="5" id="osQ-C1-4au"/>
+                                        <constraint firstAttribute="bottom" secondItem="W3u-14-XFA" secondAttribute="bottom" constant="6.5" id="qEY-Wq-1dH"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="dateLabel" destination="gDG-Ze-kER" id="WhO-5r-D84"/>
+                                    <outlet property="highLabel" destination="7MT-IF-INn" id="Np0-8y-eJ7"/>
+                                    <outlet property="icon" destination="Grq-P8-bFJ" id="d59-xz-Jk7"/>
+                                    <outlet property="lowLabel" destination="W3u-14-XFA" id="dZQ-xz-YaK"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -47,7 +88,7 @@
                             <outlet property="delegate" destination="OLk-46-EC2" id="wpx-ON-g4b"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="ssO-d6-82G"/>
+                    <navigationItem key="navigationItem" title="New York City Weather" id="ssO-d6-82G"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bac-xK-uIC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

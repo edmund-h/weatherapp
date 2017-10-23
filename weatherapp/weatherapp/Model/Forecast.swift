@@ -42,7 +42,8 @@ struct Forecast {
                 let dictMaxTempC = forecastDict[Values.maxTempC.rawValue] as? Int,
                 let dictMinTempF = forecastDict[Values.minTempF.rawValue] as? Int,
                 let dictMinTempC = forecastDict[Values.minTempC.rawValue] as? Int,
-                let dictIcon = forecastDict[Values.icon.rawValue] as? String {
+                let dictIconStr = forecastDict[Values.icon.rawValue] as? String,
+                let dictIcon = dictIconStr.components(separatedBy: ".").first{
                     let myForecast = Forecast(
                         date: dictDate,
                         maxTempF: dictMaxTempF,
