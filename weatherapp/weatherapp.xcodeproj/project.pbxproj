@@ -12,6 +12,7 @@
 		88CBDE041F9E4E9700FB457F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88CBDE021F9E4E9700FB457F /* Main.storyboard */; };
 		88CBDE061F9E4E9700FB457F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 88CBDE051F9E4E9700FB457F /* Assets.xcassets */; };
 		88CBDE091F9E4E9700FB457F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88CBDE071F9E4E9700FB457F /* LaunchScreen.storyboard */; };
+		88CBDE111F9E51F400FB457F /* aeris.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88CBDE101F9E51F400FB457F /* aeris.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		88CBDE051F9E4E9700FB457F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		88CBDE081F9E4E9700FB457F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		88CBDE0A1F9E4E9700FB457F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		88CBDE101F9E51F400FB457F /* aeris.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = aeris.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,8 +62,18 @@
 				88CBDE051F9E4E9700FB457F /* Assets.xcassets */,
 				88CBDE071F9E4E9700FB457F /* LaunchScreen.storyboard */,
 				88CBDE0A1F9E4E9700FB457F /* Info.plist */,
+				88CBDE121F9E522800FB457F /* Secrets */,
 			);
 			path = weatherapp;
+			sourceTree = "<group>";
+		};
+		88CBDE121F9E522800FB457F /* Secrets */ = {
+			isa = PBXGroup;
+			children = (
+				88CBDE101F9E51F400FB457F /* aeris.swift */,
+			);
+			name = Secrets;
+			path = "New Group";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,6 +149,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				88CBDE011F9E4E9700FB457F /* ViewController.swift in Sources */,
+				88CBDE111F9E51F400FB457F /* aeris.swift in Sources */,
 				88CBDDFF1F9E4E9700FB457F /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
