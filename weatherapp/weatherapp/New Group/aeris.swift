@@ -7,3 +7,8 @@
 //
 
 import Foundation
+
+final class AerisID {
+    static let accessID = "PkowvpSu7RjyMzIVj1rYt"
+    static let secretKey = "I6c9scEv8Ki5Z5sGOI72RADDV11sroPoAEGoJ1xn"
+}
