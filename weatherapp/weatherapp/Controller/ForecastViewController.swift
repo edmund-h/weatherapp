@@ -13,15 +13,19 @@ class ForecastViewController: UITableViewController {
     var forecasts: [Forecast] = [] {
         didSet {
             DispatchQueue.main.async {
+                if let savedMode = UserDefaults.standard.string(forKey: "unitMode"){
+                    self.unitMode = UnitMode(rawValue:savedMode)
+                }
                 self.tableView.reloadData()
             }
         }
     }
+    var unitMode: UnitMode? = nil
     
     let dateFormatter = DateFormatter()
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         
         dateFormatter.dateFormat = "MMMM dd"
         
@@ -54,9 +58,23 @@ class ForecastViewController: UITableViewController {
             cell.icon.image = myImg
         }
         cell.dateLabel.text = dateFormatter.string(from: myForecast.date)
-        cell.highLabel.text = "High: \(myForecast.maxTempF)"
-        cell.lowLabel.text = "Low: \(myForecast.minTempF)"
+        let tempText = makeTempStrings(from: myForecast)
+        cell.highLabel.text = tempText.0
+        cell.lowLabel.text = tempText.1
         return cell
+    }
+    
+    func makeTempStrings(from forecast: Forecast)->(String, String) {
+        var high: String
+        var low: String
+        if unitMode == .celsius {
+            high = "High: \(forecast.maxTempC)"
+            low = "Low: \(forecast.minTempC)"
+        } else {
+            high = "High: \(forecast.maxTempF)"
+            low = "Low: \(forecast.minTempF)"
+        }
+        return (high, low)
     }
 }
 

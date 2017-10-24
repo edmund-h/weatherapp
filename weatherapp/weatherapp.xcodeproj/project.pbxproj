@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		8861E7321F9E830D009D5F7E /* ForecastViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8861E7311F9E830D009D5F7E /* ForecastViewController.swift */; };
+		8861E7361F9E8B56009D5F7E /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8861E7351F9E8B56009D5F7E /* SettingsViewController.swift */; };
 		88CBDDFF1F9E4E9700FB457F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88CBDDFE1F9E4E9700FB457F /* AppDelegate.swift */; };
 		88CBDE041F9E4E9700FB457F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88CBDE021F9E4E9700FB457F /* Main.storyboard */; };
 		88CBDE061F9E4E9700FB457F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 88CBDE051F9E4E9700FB457F /* Assets.xcassets */; };
@@ -21,6 +22,7 @@
 
 /* Begin PBXFileReference section */
 		8861E7311F9E830D009D5F7E /* ForecastViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForecastViewController.swift; sourceTree = "<group>"; };
+		8861E7351F9E8B56009D5F7E /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		88CBDDFB1F9E4E9700FB457F /* weatherapp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = weatherapp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		88CBDDFE1F9E4E9700FB457F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		88CBDE031F9E4E9700FB457F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -108,6 +110,7 @@
 			isa = PBXGroup;
 			children = (
 				8861E7311F9E830D009D5F7E /* ForecastViewController.swift */,
+				8861E7351F9E8B56009D5F7E /* SettingsViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -195,6 +198,7 @@
 			files = (
 				88D6EC731F9E6BBB00962435 /* ForecastTableViewCell.swift in Sources */,
 				88CBDE111F9E51F400FB457F /* aeris.swift in Sources */,
+				8861E7361F9E8B56009D5F7E /* SettingsViewController.swift in Sources */,
 				88CBDDFF1F9E4E9700FB457F /* AppDelegate.swift in Sources */,
 				88D6EC6E1F9E536100962435 /* AerisClient.swift in Sources */,
 				88D6EC701F9E551600962435 /* Forecast.swift in Sources */,
